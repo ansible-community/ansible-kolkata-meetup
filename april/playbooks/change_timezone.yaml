@@ -1,0 +1,9 @@
+---
+- hosts: server01
+  gather_facts: yes
+  tasks:
+    - name: Set timezone
+      # Show that this is not present and you have to run ansible-galaxy collection install community.general to install it
+      community.general.timezone:
+        name: Asia/Kolkata
+

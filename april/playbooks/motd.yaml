@@ -1,0 +1,20 @@
+---
+- hosts: server01
+  gather_facts: true
+  tasks:
+    - name: Create /etc/motd
+      ansible.builtin.file:
+        path: /etc/motd
+        state: touch
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Show message of the day
+      ansible.builtin.template:
+        src: files/motd.j2
+        dest: /etc/motd
+        owner: root
+        group: root
+        mode: '0644'
+

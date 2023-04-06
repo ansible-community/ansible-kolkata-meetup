@@ -1,0 +1,23 @@
+---
+- hosts: server01
+  gather_facts: true
+  tasks:
+  - name: Run apt-get update
+    ansible.builtin.apt:
+      update_cache: yes
+
+  - name: Install apache
+    ansible.builtin.apt:
+      name: apache2
+      state: latest
+
+  - name: Start apache service
+    ansible.builtin.service:
+      name: apache2
+      state: started
+
+  - name: Create test welcome page
+    ansible.builtin.copy:
+      content: "<html><body><h1>Welcome to Ansible Kolkata meetup!</h1></body></html>"
+      dest: "/var/www/html/index.html"
+
