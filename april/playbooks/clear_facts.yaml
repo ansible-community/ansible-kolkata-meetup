@@ -1,0 +1,5 @@
+---
+- hosts: server01
+  gather_facts: no
+  tasks:
+    - meta: clear_facts
