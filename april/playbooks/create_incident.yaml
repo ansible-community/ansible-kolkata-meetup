@@ -2,12 +2,9 @@
 - hosts: server01
   gather_facts: false
   tasks:
-    - debug:
-        msg: "{{ lookup('env', 'SN_HOST') }}"
-
     - name: Create ServiceNow ticket to resolve issue
       servicenow.itsm.incident:
-        incident:
+        instance:
           host: "{{ SN_HOST }}"
           username: "{{ SN_USERNAME }}"
           password: "{{ SN_PASSWORD }}"
