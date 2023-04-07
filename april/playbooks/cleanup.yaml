@@ -14,8 +14,5 @@
 
   - name: Remove welcome page artifacts
     ansible.builtin.file:
-      path: "/var/www/html/{{ item }}"
-    loop:
-      - awx-spud.svg
-      - index.html
+      path: "/var/www/html/index.html"
 

@@ -13,11 +13,8 @@
 
   - name: Copy welcome page artifacts
     ansible.builtin.template:
-      src: "{{ item }}"
-      dest: "/var/www/html/{{ item }}"
-    loop:
-      - awx-spud.svg
-      - index.html
+      src: "index.html"
+      dest: "/var/www/html/index.html"
 
   - name: Start Apache service
     ansible.builtin.service:
