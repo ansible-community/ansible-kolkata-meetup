@@ -11,11 +11,6 @@
       name: apache2
       state: latest
 
-  - name: Start apache service
-    ansible.builtin.service:
-      name: apache2
-      state: started
-
   - name: Copy welcome page artifacts
     ansible.builtin.copy:
       content: "{{ item }}"
@@ -24,8 +19,8 @@
       - awx-spud.svg
       - index.html
 
-  - name: Create test welcome page
-    ansible.builtin.copy:
-      content: "{{ lookup('template', 'index.html') }}"
-      dest: "/var/www/html/index.html"
+  - name: Start Apache service
+    ansible.builtin.service:
+      state: started
+      name: apache2
 
