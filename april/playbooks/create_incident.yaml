@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
     - debug:
-        host: "{{ lookup('env', 'SN_HOST') }}"
+        msg: "{{ lookup('env', 'SN_HOST') }}"
 
     - name: Create ServiceNow ticket to resolve issue
       servicenow.itsm.incident:
