@@ -1,0 +1,21 @@
+---
+- hosts: server01
+  gather_facts: true
+  tasks:
+  - name: Stop Apache service
+    ansible.builtin.service:
+      state: stopped
+      name: apache2
+
+  - name: Remove Apache
+    ansible.builtin.apt:
+      name: apache2
+      state: absent
+
+  - name: Remove welcome page artifacts
+    ansible.builtin.file:
+      path: "/var/www/html/{{ item }}"
+    loop:
+      - awx-spud.svg
+      - index.html
+
