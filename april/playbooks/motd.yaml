@@ -11,7 +11,7 @@
         mode: '0644'
 
     - name: Show message of the day
-      ansible.builtin.template:
+      ansible.builtin.copy:
         content: "{{ ansible_motd }}"
         dest: /etc/motd
         owner: root
