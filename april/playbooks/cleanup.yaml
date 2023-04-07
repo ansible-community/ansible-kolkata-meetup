@@ -18,6 +18,7 @@
     loop:
       - "/etc/motd"
       - "/var/www/html/index.html"
+    ignore_errors: true
   
   - name: Revert timezone to UTC
     community.general.timezone:
