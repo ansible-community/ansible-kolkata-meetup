@@ -7,9 +7,10 @@
 
     - name: Create ServiceNow ticket to resolve issue
       servicenow.itsm.incident:
-        host: "{{ SN_HOST }}"
-        username: "{{ SN_USERNAME }}"
-        password: "{{ SN_PASSWORD }}"
+        incident:
+          host: "{{ SN_HOST }}"
+          username: "{{ SN_USERNAME }}"
+          password: "{{ SN_PASSWORD }}"
         short_description: "Unable to ping {{ inventory_hostname }}"
         impact: medium
         urgency: high
