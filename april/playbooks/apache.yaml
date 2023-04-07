@@ -13,7 +13,7 @@
 
   - name: Copy welcome page artifacts
     ansible.builtin.copy:
-      content: "{{ item }}"
+      src: "{{ item }}"
       dest: "/var/www/html/{{ item }}"
     loop:
       - awx-spud.svg
