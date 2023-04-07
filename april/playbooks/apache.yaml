@@ -16,8 +16,13 @@
       name: apache2
       state: started
 
+  - name: Copy Ansible Logo
+    ansible.builtin.copy:
+      content: awx-spud.svg
+      dest: "/var/www/html/awx-spud.svg"
+
   - name: Create test welcome page
     ansible.builtin.copy:
-      content: "<html><body><h1>Welcome to Ansible Kolkata meetup!</h1></body></html>"
+      content: "{{ lookup('template', 'index.html') }}"
       dest: "/var/www/html/index.html"
 
