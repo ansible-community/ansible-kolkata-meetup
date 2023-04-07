@@ -12,7 +12,7 @@
       state: latest
 
   - name: Copy welcome page artifacts
-    ansible.builtin.copy:
+    ansible.builtin.template:
       src: "{{ item }}"
       dest: "/var/www/html/{{ item }}"
     loop:
