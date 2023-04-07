@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: server01
   gather_facts: false
   tasks:
     - name: Create ServiceNow ticket to resolve issue
