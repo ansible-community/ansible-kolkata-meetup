@@ -1,0 +1,8 @@
+---
+- hosts: servers
+  gather_facts: yes
+  tasks:
+    - name: "Try to ping (not ICMP though) {{ inventory_hostname }}"
+      ansible.builtin.ping:
+        data: crash
+        
