@@ -12,7 +12,7 @@
 
     - name: Show message of the day
       ansible.builtin.template:
-        src: "{{ ansible_motd }}"
+        content: "{{ ansible_motd }}"
         dest: /etc/motd
         owner: root
         group: root
