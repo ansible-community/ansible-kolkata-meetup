@@ -16,10 +16,13 @@
       name: apache2
       state: started
 
-  - name: Copy Ansible Logo
+  - name: Copy welcome page artifacts
     ansible.builtin.copy:
-      content: awx-spud.svg
-      dest: "/var/www/html/awx-spud.svg"
+      content: "{{ item }}"
+      dest: "/var/www/html/{{ item }}"
+    loop:
+      - awx-spud.svg
+      - index.html
 
   - name: Create test welcome page
     ansible.builtin.copy:
