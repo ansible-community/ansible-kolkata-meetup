@@ -1,7 +1,0 @@
-[servers]
-server01 ansible_host=ec2-3-110-196-255.ap-south-1.compute.amazonaws.com
-
-[all:vars]
-ansible_user=ubuntu
-ansible_become=true
-ansible_private_key_file=/home/nchakrab/Downloads/awx.pem
