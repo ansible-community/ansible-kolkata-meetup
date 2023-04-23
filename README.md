@@ -12,4 +12,4 @@
 
 - [Introduction to Ansible Ecosystem](https://slides.com/kb-perbyte/ansible_ecosystem/fullscreen)
 - [Running Automation Jobs with AWX](https://slides.com/nilashishc/awx/fullscreen)
-- How to connect with the Ansible Community?
+- [How to connect with the Ansible Community?](https://github.com/ansible-community/ansible-kolkata-meetup/blob/main/2023/april/slides/ways_to_join_ansible_community.pptx)
