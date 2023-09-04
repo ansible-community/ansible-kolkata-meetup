@@ -1,5 +1,18 @@
 ## Ansible Kolkata Meetup Group
 
+### Meetup #2
+
+**Date:** 2nd September'23
+
+**Mode:** In-person
+
+**Agenda:** https://www.meetup.com/ansible-kolkata/events/295504178/
+
+**Slides:**
+
+- [Introduction to Execution Environments and ansible-navigator](https://slides.com/kb-perbyte/navigator_story/fullscreen)
+
+
 ### Meetup #1
 
 **Date:** 8th of April'23
