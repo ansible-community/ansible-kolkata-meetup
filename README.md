@@ -12,6 +12,7 @@
 
 - [Introduction to Execution Environments and ansible-navigator](https://slides.com/kb-perbyte/navigator_story/fullscreen)
 - [Middleware Automation using Ansible](2023/september/slides/Middleware_automation_using_Ansible.pdf)
+- [Fedora Toolbox - The future landscape of Immutable OS](2023/september/Toolbx.pdf)
 
 
 ### Meetup #1
